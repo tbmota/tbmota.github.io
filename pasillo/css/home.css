@@ -1,0 +1,134 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+   /* Css: Estilizar o rodapé usando exclusivamente css. Da linha 13 à 21 do home.css*/
+    letter-spacing: .03em;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0; 
+}
+html, body{ /*define um tamanho para manter o footer na posição escolhida*/
+    height: 100%;
+}
+footer { /*Css: Estilizar o rodapé usando exclusivamente css*/
+    color: #101022/*#e6e6e6*//*#54546e*/;
+    text-align: center;
+    width: 100%;
+   /* height: 1px;
+    padding-bottom: 3%;*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.navbar {
+    background-color: white;
+    border-bottom: 1px solid #101022;
+    color: #101022;
+    padding: 1.2%;
+}
+.nav-link, #conteudoNavbarSuportado{
+    color: #101022;
+}
+#img_center{
+    padding: 6% 0;
+}
+.navbar-toggler-icon { /*ícone de quando diminui a tela*/
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(16,16,34)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.navbar-toggler {  /*collapse esconde o conteúdo; / .collapse('toggle')
+    Alterna um elemento colapsável para mostrar ou escondê-lo. / data-target pois são vário conteúdos escondidos, O atributo data-target aceita um seletor CSS para aplicar o colapso. / aria é usado para a acessibilidade Se o elemento colapsável é fechado por padrão, o atributo no elemento controle deve ter o valor de aria-expanded="false";*/
+    border-color: #101022;
+} 
+nav ul a:hover { 
+    color: #ccc; 
+}
+.wrapped{ /*a seta aparece quando passo por cima*/
+    cursor: pointer;
+}
+#content2{
+    color: #54546e;
+    cursor: pointer;
+    margin-top: 10%;
+    margin-left: 25%;
+    padding: 10%;
+    height: 400px;
+    width: 50%;
+    overflow: scroll;
+}
+blockquote{ /*usado na citação*/
+    font-style: italic;
+}
+/* Scroll quando clico na imagem personalizar a barra em geral, aqui estou definindo 1px de largura para a barra vertical
+e 0px de altura para a barra horizontal */
+::-webkit-scrollbar {
+    width:1px;
+    height: 0;
+}
+/* aqui é para personalizar o fundo da barra*/
+::-webkit-scrollbar-track {
+background:#101022;
+}
+/* aqui é a alça da barra, que demonstra a altura que você está na página estou colocando uma cor azul clara nela*/
+::-webkit-scrollbar-thumb {
+background: #5757ba;
+}
+.container-fluid{ /*coloquei para definir o tamanho da página, onde o footer ficaria*/
+    min-height: 100%;
+    position: relative;
+}
+.animate__animated {
+    animation: pulse; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+  }
+.navbar{
+    animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+  }
+/*Fazendo a mesma coisa mas agora mudando o tamanho da tela - usando media-querie*/
+@media screen and (min-width: 960px) { /*laptop*/
+    #content1{
+        margin-top: 5%;
+    }
+    .img-fluid{
+        width: 50%;
+    }
+    #content2{
+        margin-top: 5%;
+        width: 50%;
+    }
+}
+@media screen and (min-width: 640px) and (max-width: 800px) { /*tablete*/
+    #content1{
+        margin-top: 5%;
+    }
+    .img-fluid{
+        width: 80%;
+    }
+    #content2{
+        margin: 5%;
+        margin-left: 15%;
+        width: 70%;
+    }
+}
+@media screen and (max-width: 480px) { /*celular*/
+    #content1{
+        margin-top: 10%;
+    }
+    .img-fluid{
+        width: 80%;
+    }
+    #content2{
+        margin-top:10%;
+        margin-left: 10%;
+        height: 200px;
+        width: 80%;
+    }
+}
+/*essas são as configurações padrão, se não forem especificadas pelo usuário
+$breakpoints: (
+  'xs': 0px,
+  'sm': 480px, iphone
+  'md': 640px,
+  'lg': 800px,
+  'xl': 960px,
+);*/

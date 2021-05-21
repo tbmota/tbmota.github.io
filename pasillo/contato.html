@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<!--Site formado com 4 páginas (mínimo) 6 (máximo): - Formulário / JavaScript: validação de cnpj/cpf. Linha 48 à 124 do contato.js-->
+
+<meta charset="utf-8"> <!--Mostra o conjunto de caracteres usado para escrever o site.-->
+<meta http-equiv="X-UA-Compatible"><!--Determina a versão do Internet Explorer que deve renderizar a página. Usando a versão Edge do navegador, ele fica configurado para usar o modo mais elevado disponível.-->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!--Garante que a página tem a proporção de 1:1 em qualquer tamanho de visualização.-->
+
+<!--css: que contém os arquivos necessários para a estilização dos elementos e uma alternativa ao tema original;-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> <!--É a parte onde adicionamos o CSS do Bootstrap.-->
+<link rel="stylesheet" href="./css/home.css">
+<link rel="stylesheet" href="./css/contato.css"><!--CSS DA PÁGINA-->
+
+<!--Google Fonts https://fonts.google.com/specimen/Montserrat-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+<title>Contato</title>
+</head>
+<body>
+
+<!--js: contém as versões do arquivo bootstrap.js (original e minificado), que é responsável por executar as aplicações de estilo que necessitam de manipulação interativa.-->
+<!-- JS FILES ordem: JQuery, Popper.js e Bootstrap.js-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><!--src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"--><!--Carrega o jQuery pelo CDN do Google. É melhor carregá-lo de um CDN via HTTP, pois os arquivos podem ficar armazenados em cache por um ano.-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><!--Adiciona o JavaScript do Bootstrap. Essa sintaxe deve ser sempre abaixo da sintaxe do jQuery para funcionar corretamente. E o processo de adição pode ser feito pela URL do Google ou por download manual.-->
+<script src="js/home.js"></script>
+<script src="js/contato.js"></script><!--JS DA PÁGINA-->
+
+<!--MENU-->
+
+<div class="container-fluid text-justify text-lowercase sr-class"> <!--sr-class: Se assegure que a informação denotada pela cor é tanto destacada do conteúdo (ex: o texto visível) ou está incluída em meios alternativos -->
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-md navbar-fixed-bottom mt-1"> <!--navbar ampliado em tela média (md)-->
+        <a class="navbar-brand navbar-active" href="home.html" style="color: #101022;">pasillo</a> <!--brand usado por conta da marca-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" 
+        data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" 
+            aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span> <!--.collapse esconde o conteúdo; / .collapse('toggle')
+                Alterna um elemento colapsável para mostrar ou escondê-lo. / data-target pois são vário conteúdos escondidos, O atributo data-target aceita um seletor CSS para aplicar o colapso. / aria é usado para a acessibilidade Se o elemento colapsável é fechado por padrão, o atributo no elemento controle deve ter o valor de aria-expanded="false";-->
+        </button>
+
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="conteudoNavbarSuportado">
+            <ul class="navbar-nav ml-auto"> <!--tamanho 100% / ordem: 1esquerda - 2centro - 3direita / margem esquerda automática-->
+                <li class="nav-item">
+                    <a class="nav-link mr-5" href="servicos.html">serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-5" href="projetos.html">projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-5" href="sobreNos.html">sobre nós</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-2" href="contato.html">contato</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<!--MENU-->   
+
+    <!--Conteúdo-->
+	<div class="wrapped text-justify col-md-12">
+
+        <form class="form-group" action=""> <!--formulário -->
+
+            <div>
+                <p>Entre em contato</p>
+            </div>
+            
+            <div class="form-check">
+                <input type="radio" value="pessoa" name="pessoa" id="fisica" style="background-color: #dfdfdf;">
+                <label class="form-check-label btn btn-sm" for="fisica" >Pessoa Física</label><br>
+
+                <input type="radio" value="pessoa" name="pessoa" id="juridica" style="background-color: #dfdfdf;">
+                <label class="form-check-label btn btn-sm" for="juridica">Pessoa Jurídica</label> <!--Estilo nos botões e texto -->
+            </div>
+
+            <div class="form-cadastro" id="cadastro_cpf">
+                <!-- se for fisica -->
+                <div>
+                    <div>
+                        <label for="nome" id="name">Nome:</label><br>
+                        <input type="text" id="nome" required="" style="background-color: #dfdfdf;">
+                    </div>
+                    <div>
+                        <label for="cpf">CPF:</label><br>
+                     <input type="text" name="cpf" id="cpf" placeholder="xxxxxxxxxxx" onkeyup="FormataCPF(this,event)" onblur="if(!validarCPF(this.value)){alert('CPF Informado é inválido'); this.value='';}" maxlength="11" class="form-control input-md" ng-model="cadastro.cpf" style="background-color: #dfdfdf;">
+                    </div> <!--O keyup evento ocorre quando uma tecla do teclado é solta. O keyup() método dispara o keyup evento, ou atribui uma função a ser executada quando um keyup evento ocorre. / onblur verificar se um evento foi disparado /  O ng-model é uma diretiva de ligação, ou seja, ele vincula a propriedade ao $scope.-->
+                </div>
+            </div>
+            <div class="form-cadastro" id="cadastro_cnpj">
+                
+                <!-- se for juridica -->
+                <div>
+                    <div>    
+                        <label for="empresa" id="company">Empresa:</label><br>
+                        <input type="text" id="empresa" required="" style="background-color: #dfdfdf;">
+                    </div>
+                    <div>
+                        <label for="cnpj">CNPJ:</label><br>
+                       <input type="text" name="cnpj" id="cnpj" placeholder="xxxxxxxxxxxxxx" onkeyup="FormataCnpj(this,event)" onblur="if(!validarCNPJ(this.value)){alert('CNPJ Informado é inválido'); this.value='';}" maxlength="18"  class="form-control input-md" ng-model="cadastro.cnpj" style="background-color: #dfdfdf;">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label for="email" id="email">Email:</label><br>
+                <input type="email" name="email" class="form-control" placeholder="email@email.com" required="" id="emailFocus" style="background-color: #dfdfdf;">
+            </div>
+
+            <div>
+                <label for="" id="project">Tipo de Projeto:</label><br>
+                <select name="" id="projeto" required="" style="background-color: #dfdfdf;">                    
+                    <option value="">selecione:</option>
+                    <option value="comercial">comercial</option>
+                    <option value="institucional">institucional</option>
+                    <option value="residencial">residencial</option>
+                    <option value="outras">outras</option><br />
+                </select>
+  
+            </div>
+
+            <div>
+                <label for="msg" id="message">Mensagem:</label><br>
+                <textarea type="text" id="msg" required="" style="background-color: #dfdfdf;"></textarea>
+            </div>
+
+            <div>
+                <input class="btn btn-outline-light btn-sm" onclick="fases()" type="submit" value="enviar" id="enviar" style="color: #101022;"> <!--Estilo nos botões e texto -->
+            </div>
+            <small id="small" class="form-text text-muted">Agradecemos seu contato<br> em breve retornaremos a sua solicitação.</small>
+        </form>
+        <div class="logoAzul">
+            <img src="./imagens/LOGO AZUL.png" width="8%">
+        </div>
+    </div>
+
+    <!--Conteúdo-->
+
+    <!--FOOTER-->
+    <footer class="footer mb-2"> copyright &copy; 2021 | pasillo</footer> <!--Css: Estilizar o rodapé usando exclusivamente css.-->
+    <!--FOOTER-->
+</div>
+
+</body>
+</html>

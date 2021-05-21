@@ -1,0 +1,94 @@
+.wrapped { /*Grid geral*/
+	list-style: none;
+	padding: 0 0 5% 0;
+	margin: 0;
+}
+.wrapped:before, /* Limpando o grid, senão o footer sobe. A propriedade CSS content é usada com os pseudoelementos ::before e ::after para gerar conteúdo em um elemento. Objetos inseridos usando a propriedade content são elementos substituídos anônimos.*/
+.wrapped:after { 
+	content: " "; 
+	display: table; 
+}
+
+/*Caixinhas antes*/
+.wrapped:after { 
+	clear: both; 
+}
+.wrapped li { /*boxes do grid*/
+	width: 33%;
+	float: left;
+	height: 400px;
+}
+.wrapped li > a { /*Estilo do link a */
+	display: block;
+	height: 100%;
+	color: #101022;
+}
+.box-tipo {
+	padding: 30px 0 0 0;
+	display: block;
+}
+.wrapped .box-area { /*area da casa*/
+	margin: 20px 0 10px 0;
+	padding: 20px 0 0 0;
+	font-size: 2em;
+	position: relative;
+	-webkit-transition: -webkit-transform 0.2s;  /*determina a velocidade de transição da barra superior*/
+	-moz-transition: -moz-transform 0.2s;
+	transition: transform 0.2s; 
+}
+
+/*Caixinhas depois*/
+.wrapped .box-area:before {
+	content: '';
+	position: absolute;
+	background: #101022;
+	width: 45%; /*tamanho da barra*/
+	height: 6px;
+	top: 0px;
+	left: 50%;
+	margin: -10px 0 0 -80px;
+	-webkit-transition: margin-top 0.2s; /*determina a velocidade de transição da barra inferior*/
+	-moz-transition: margin-top 0.2s;
+	transition: margin-top 0.2s;
+}
+.wrapped .box-foto {  /*faz a foto se mexer ao passar por ela*/
+	display: inline-block;
+	opacity: 0;
+}
+.wrapped li:hover .box-foto,
+.touch .wrapped li .box-foto {
+	opacity: 1;
+}
+.wrapped li > a:hover { /* Cor de fundo */
+	background: #101022;
+}
+.wrapped li > a:hover .box-tipo:before, /*cor das letras do depois*/
+.wrapped li > a:hover .box-area {
+	color: #fff;
+}
+.wrapped li > a:hover .box-area:before {
+	background: #fff;
+	margin-top: 80px;
+}
+/*Fazendo a mesma coisa mas agora mudando o tamanho da tela - usando media-querie*/
+@media screen and (max-width: 62.75em) {
+	.wrapped li {
+		width: 50%;
+	}
+}
+@media screen and (max-width: 41.6em) { 
+	.wrapped li {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 25em) { 
+	.wrapped li {
+		font-size: 80%;
+	}
+}
+.logoAzul{
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    text-align: right;
+}

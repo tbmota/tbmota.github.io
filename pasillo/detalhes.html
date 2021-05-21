@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <!--Site formado com 4 páginas (mínimo) 6 (máximo): - Pagina inicial / Css: Estilizar o rodapé usando exclusivamente css. Da linha 13 à 21 do home.css / Jquery : utilizar um scroll que a partir de  400px do topo do body apareça uma seta ao lado direito da pagina que funciona como retorno suave para o inicio da pagina , aplicar essa função na pagina inicial do projeto. Da linha 15 à 34 do home.js / HTML: Utilizar <article>. Da linha 80 à 102-->
+
+<meta charset="utf-8"> <!--Mostra o conjunto de caracteres usado para escrever o site.-->
+<meta http-equiv="X-UA-Compatible"><!--Determina a versão do Internet Explorer que deve renderizar a página. Usando a versão Edge do navegador, ele fica configurado para usar o modo mais elevado disponível.-->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!--Garante que a página tem a proporção de 1:1 em qualquer tamanho de visualização.-->
+
+<!--css: que contém os arquivos necessários para a estilização dos elementos e uma alternativa ao tema original;-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> <!--É a parte onde adicionamos o CSS do Bootstrap.-->
+<link rel="stylesheet" href="./css/home.css">
+<link rel="stylesheet" href="./css/detalhes.css"><!--CSS DA PÁGINA-->
+
+<!--Google Fonts https://fonts.google.com/specimen/Montserrat-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+<title>Projetos detalhados</title>
+</head>
+<body>
+
+<!--js: contém as versões do arquivo bootstrap.js (original e minificado), que é responsável por executar as aplicações de estilo que necessitam de manipulação interativa.-->
+<!-- JS FILES ordem: JQuery, Popper.js e Bootstrap.js-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><!--src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"--><!--Carrega o jQuery pelo CDN do Google. É melhor carregá-lo de um CDN via HTTP, pois os arquivos podem ficar armazenados em cache por um ano.-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><!--Adiciona o JavaScript do Bootstrap. Essa sintaxe deve ser sempre abaixo da sintaxe do jQuery para funcionar corretamente. E o processo de adição pode ser feito pela URL do Google ou por download manual.-->
+<script src="js/home.js"></script>
+<!--JS DA PÁGINA-->
+
+
+<!--MENU-->
+
+<div class="container-fluid text-justify text-lowercase sr-class"> <!--sr-class: Se assegure que a informação denotada pela cor é tanto destacada do conteúdo (ex: o texto visível) ou está incluída em meios alternativos -->
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-md navbar-fixed-bottom mt-1"> <!--navbar ampliado em tela média (md)-->
+        <a class="navbar-brand navbar-active" href="home.html" style="color: #101022;">pasillo</a> <!--brand usado por conta da marca-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" 
+        data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" 
+            aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span> <!--.collapse esconde o conteúdo; / .collapse('toggle')
+                Alterna um elemento colapsável para mostrar ou escondê-lo. / data-target pois são vário conteúdos escondidos, O atributo data-target aceita um seletor CSS para aplicar o colapso. / aria é usado para a acessibilidade Se o elemento colapsável é fechado por padrão, o atributo no elemento controle deve ter o valor de aria-expanded="false";-->
+        </button>
+
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="conteudoNavbarSuportado">
+            <ul class="navbar-nav ml-auto"> <!--tamanho 100% / ordem: 1esquerda - 2centro - 3direita / margem esquerda automática-->
+                <li class="nav-item">
+                    <a class="nav-link mr-5" href="servicos.html">serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-5" href="projetos.html">projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-5" href="sobreNos.html">sobre nós</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-2" href="contato.html">contato</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<!--MENU-->   
+
+    <!--Conteúdo-->
+
+	<div class="wrapped text-justify">
+        <div class="row">
+            <div class="planta1 col-md-5">
+                <div class="texto">
+                <h2>Sala de Estar</h2>
+                <p>
+                    as paredes a receber cores 
+                    fazem parte da primeira vista 
+                    de quem chega ao apartamento, acolhendo calorosamente 
+                    mas com tranquilidade.
+                </p>
+                <p>
+                    Ambientes distintos mas ainda 
+                    integrados. A disposição e organização dos móveis não promove 
+                    barreiras visuais, e a quantidade 
+                    moderada de elementos possibilita a adaptação do layout para 
+                    eventos especiais.
+                </p>
+                </div>
+            </div>
+            <div class="planta1 col-md-7">
+                <div class="box">
+                    <img src="imagens/Planta layout_.png"  class="planta1">
+                    <div class="overlay">
+                        <img src="./imagens/sala.png" width="100%">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="planta1 col-md-5">
+                    <div class="texto">
+                    <h2>sala de jantar</h2>
+                    <p>
+                        Receber amigos e 
+                        família;
+                        Iluminação efciente e 
+                        elegante;
+                        Incluir objetos de 
+                        valor afetivo no 
+                        projeto;
+                    </p>
+                    <p>A totalidade das peças não constituem blocos maciços, permitindo que a vista percorra o ambiente sem 
+                        grandes barreiras.
+                    </p>
+                    </div>
+                </div>
+
+            <div class="planta1 col-md-7">
+                <div class="box">
+                    <img src="imagens/salaJantar - Copia.png" class="planta1">
+                    <div class="overlay">
+                        <img src="./imagens/sala_jantar.png" width="100%">
+                    </div>
+                </div>
+            </div>
+                               
+            <div class="row">
+                <div class="planta1 col-md-5">
+                    <div class="texto">
+                    <h2>varanda + sala de jantar</h2>
+                    <p>Ambiente com boa 
+                        iluminação e ventilação 
+                        natural. Sem problemas de 
+                        insolação excessiva, devido a 
+                        boa implantação do edifício.
+                        </p>
+                    <p>O caráter amplo 
+                        proporcionado pelo formato, 
+                        dispensa grandes 
+                        intervenções na planta do 
+                        apartamento.
+                    </p>
+                    </div>
+                </div>
+
+            <div class="planta1 col-md-7">
+                <div class="box">
+                    <img src="imagens/ladrilho.png" class="planta1">
+                    <div class="overlay">
+                        <img src="./imagens/varanda - Copia.png" width="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+        <div class="row">
+            <div class="planta1 col-md-5">
+                <div class="texto">
+                <h2>decoração</h2>
+                <p>A ideia é abrir espaços, liberar a circulação e 
+                    criar um ambiente múltiplo, com espaços 
+                    confortáveis e de personalidade.
+                </p>
+                <p>
+                    Manter a sensação de interior amplo, no qual o espaço 
+                    é aproveitado ao máximo, sem abrir mão do conforto e 
+                    da personalidade marcante, é a principal premissa para 
+                    escolher as peças que vão compor o layout.
+                </p>
+                </div>
+            </div>
+
+        <div class="planta col-md-7">
+            <div class="box">
+                <img src="imagens/mood d e m - Copia.PNG" class="planta1" style="width: 90%;">
+                <div class="overlay">
+                    <img src="./imagens/prateleira - Copia.png" width="100%" >
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="logoAzul">
+        <img src="./imagens/LOGO AZUL.png" width="8%">
+    </div>
+    <!--Conteúdo-->
+
+    <!--FOOTER-->
+    <footer class="footer mb-2"> copyright &copy; 2021 | pasillo</footer>
+    <!--FOOTER-->
+</div>
+
+</body>
+</html>

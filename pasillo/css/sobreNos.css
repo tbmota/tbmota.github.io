@@ -1,0 +1,151 @@
+.wrapped{
+    padding-top: 5%;
+}
+.mariTexto{
+    padding: 8% 4%;
+}
+.mariImg {
+    margin-left: 15%;
+    padding: 4%;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.wynieTexto{
+    padding: 8% 4%;
+    text-align: right;
+}
+.wynieImg{
+    padding: 4%;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.mariFoto{
+    border-right: 1px solid #101022;
+}
+.wynieFoto{
+    border-left: 1px solid #101022;
+}
+.box {
+    position: relative;
+    margin-left: 15%;
+    padding: 4%;
+    width: 70%;
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    right: 0;
+    background-color: #101022;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+    opacity: 0.5;
+  }
+.box:hover .overlay {
+    width: 100%;
+}
+.text {
+    white-space: nowrap; 
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.logoAzul{
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    text-align: right;
+}
+@media screen and (min-width: 640px) and (max-width: 800px) { /*tablete*/
+    .box{
+        margin-top: 5%;
+    }
+    .mariImg {
+        margin: 0;
+        margin-top: 10%;
+        padding: 0;
+        width: 100%;
+    }
+    .wynieImg {
+        margin: 0;
+        margin-top: 10%;
+        padding: 0;
+        width: 100%;
+    }
+    .btn{
+        width: 13%;
+    }
+    .logoAzul{
+        width: 150%;
+    }
+}
+@media screen and (max-width: 480px) { /*celular*/
+    .box{
+        margin-top: 5%;
+    }
+    .mariImg {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .mariFoto{
+        border: none;
+    }
+    .mariTexto{
+        margin: 0;
+        margin-top: 5%;
+        padding: 0;
+        margin-left: 21%;
+    }
+    .wynieImg {
+        margin: 0;
+        margin-left: 15%;
+        padding: 0;
+        width: 100%;
+    }
+    .wynieFoto{
+        margin-top: 0;
+        padding-top: 0;
+        border: none;
+    }
+    .wynieTexto{
+        margin: 0;
+        padding: 0;
+        margin-top: 10%;
+        margin-right: 15%;
+    }
+    aside{
+        margin-top: 10%;
+    
+    }
+    h1{
+        margin-left: 6%;
+    }
+    .btn{
+        width: 15%;
+    }
+    #bio, #missao, #visao, #valores{
+        padding: 2% 10% 2% 0;
+    }
+    .logoAzul{
+        width: 200%;
+    }
+}
+/*essas são as configurações padrão, se não forem especificadas pelo usuário
+$breakpoints: (
+  'xs': 0px,
+  'sm': 480px, iphone
+  'md': 640px,
+  'lg': 800px,
+  'xl': 960px,
+);*/
+  

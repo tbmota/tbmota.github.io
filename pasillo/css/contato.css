@@ -1,0 +1,79 @@
+.wrapped{
+    background-size: cover;
+    padding: 0 0 10% 0;
+    border-top: solid #101022 1px;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    background-image:  linear-gradient(to right, transparent 0%, #fff 100%), url(../imagens/LOGO\ FUNDO\ AZUL\ -\ recortada.png);
+}
+.form-group{
+    border: solid #101022 1px;
+    border-top: none;
+    border-right: none;
+    padding: 2% 2% 1% 2%;
+    margin: 5% 0 0 55%;
+    width: 35%;
+}
+#projeto, .btn, #msg, #emailFocus, #cnpj, #cpf, #empresa, #nome{
+    border-bottom: solid #101022 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 3%;
+    margin-bottom: 2%;
+    padding: 2%;
+}
+
+#email, #name, #company, #project, #message{
+    margin-top: 2%;
+}
+#enviar{
+    margin-left: 75%;
+}
+.logoAzul{
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    text-align: right;
+}
+
+@media screen and (min-width: 640px) and (max-width: 800px)  { /*celular*/
+    .wrapped{
+        background-size: cover;
+        padding: 0 0 10% 0;
+        border-top: solid #101022 1px;
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+        background-image: linear-gradient(to right, transparent 0%, #fff 110%), url(../imagens/LOGO\ FUNDO\ AZUL\ -\ recortada.png);
+    }
+    .form-group{
+    border: solid #101022 1px;
+    border-top: none;
+    border-right: none;
+    padding: 2% 2% 1% 2%;
+    margin: 5% 0 0 20%;
+    width: 60%;
+}
+}
+@media screen and (max-width: 480px) { /*celular*/
+    .wrapped{
+        background-size: cover;
+        padding: 0 0 10% 0;
+        border-top: solid #101022 1px;
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+        background-image: linear-gradient(to right, transparent 0%, #fff 110%), url(../imagens/LOGO\ FUNDO\ AZUL\ -\ recortada.png);
+    }
+    .form-group{
+    border: solid #101022 1px;
+    border-top: none;
+    border-right: none;
+    padding: 2% 2% 1% 2%;
+    margin: 10% 0 0 20%;
+    width: 60%;
+}
+}
+  

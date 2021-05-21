@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapped{
+    padding-top: 5%;
+}
+.box {
+    position: relative;
+    width: 100%;
+}
+.planta1 {
+    display: block;
+    width: 90%;
+    padding-left: 10%;
+    margin-bottom: 5%;
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+    opacity: 1;
+  }
+.box:hover .overlay {
+    width: 100%;
+}
+.logoAzul{
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    text-align: right;
+}
+.texto{
+    padding-top: 5%;
+    padding-left: 5%;
+}
+
+@media screen and (min-width: 640px) and (max-width: 800px) { 
+    .planta1 {
+        display: block;
+        width: 90%;
+        padding-left: 10%;
+        margin-bottom: 5%;
+    }
+    .texto{
+        padding-top: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .logoAzul{
+       width: 120%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .planta1 {
+        display: block;
+        width: 90%;
+        padding-left: 10%;
+        margin-bottom: 5%;
+    }
+    .texto{
+        padding-top: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .logoAzul{
+        width: 150%;
+     }
+ }
+    
+
+/*essas são as configurações padrão, se não forem especificadas pelo usuário
+$breakpoints: (
+  'xs': 0px,
+  'sm': 480px, iphone
+  'md': 640px,
+  'lg': 800px,
+  'xl': 960px,
+);*/
+  

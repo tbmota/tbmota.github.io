@@ -1,0 +1,20 @@
+.logoAzul{
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  text-align: right;
+}
+@media screen and (max-width: 480px) { /*celular*/ /*não está funcionando*/
+  .texto{
+    grid-area: texto;
+  }
+  .img{
+     grid-area: img;
+  }
+  .wrapped{
+    display: grid;
+    grid-template-areas: 
+    "img"
+    "texto";
+  }
+}
